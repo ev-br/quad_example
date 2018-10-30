@@ -10,7 +10,11 @@ def quad_solve(b, c):
     """Find two roots of $x^2 + b*x + c = 0$."""
     d = b**2 - 4*c
     sqd = sqrt(d) if d >= 0 else c_sqrt(d)
-    x1, x2 = (-b + sqd) / 2, (-b - sqd) / 2
+    if b > 0:
+        x1 = (-b - sqd) / 2.
+    else:
+        x1 = (-b + sqd) / 2.
+    x2 = c / x1
     return x1, x2
 
 if __name__ == "__main__":
