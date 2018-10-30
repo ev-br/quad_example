@@ -17,4 +17,5 @@ if __name__ == "__main__":
     from numpy.testing import assert_allclose
     assert_allclose(quad_solve(0, -1), (1, -1))
     assert_allclose(quad_solve(0, 1), (1j, -1j))
-
+# TODO: do something for extremely large b
+#       assert_allclose(quad_solve(1e20, 1), )
