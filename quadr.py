@@ -12,5 +12,7 @@ def quad_solve(b, c):
     return x1, x2
 
 if __name__ == "__main__":
-    print(quad_solve(0, -1))
+    from numpy.testing import assert_allclose
+    assert_allclose(quad_solve(0, -1), (1, -1))
+
 
